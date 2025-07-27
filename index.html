@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Yodha - Home</title>
+    <!-- Link to Tailwind CSS for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Apply Inter font and basic styles to the body */
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Background image for the entire page from a specific source */
+            background-image: url('https://placehold.co/1920x1080/0A0A0A/E0E0E0?text=Grand+Chess+Battle');
+            /* A more thematic, dark chess background */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            /* Makes the background scroll independently */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* Ensure it takes full viewport height */
+            margin: 0;
+            padding: 1rem;
+            /* Add some padding for smaller screens */
+            box-sizing: border-box;
+            /* Include padding in element's total width and height */
+            color: #e0e0e0;
+            /* Light text color */
+            position: relative;
+            /* For the overlay */
+            overflow: hidden;
+            /* Prevent scrollbars if content slightly overflows */
+        }
+        /* Overlay for the body background to ensure text readability */
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Dark semi-transparent overlay */
+            z-index: 0;
+            /* Behind the main content */
+        }
+        /* Main container for the content, centered and with rounded corners */
+        
+        .main-content-card {
+            background-color: rgba(45, 55, 72, 0.9);
+            /* Slightly transparent dark gray */
+            border: 1px solid rgba(74, 85, 104, 0.7);
+            /* Subtle border */
+            position: relative;
+            /* To be above the body overlay */
+            z-index: 1;
+            /* Ensure it's above the body overlay */
+            animation: fadeInScale 1s ease-out forwards;
+            /* Animation on load */
+        }
+        /* Custom styles for buttons to give them a game-like feel */
+        
+        .game-button {
+            /* Use flexbox for centering content inside the link */
+            @apply flex items-center justify-center bg-gradient-to-r from-gray-700 to-gray-900 text-white font-bold py-3 px-6 rounded-lg shadow-md hover: from-gray-600 hover: to-gray-800 transition duration-300 ease-in-out transform hover: scale-105;
+            border: 2px solid #555;
+            text-decoration: none;
+            /* Remove underline from link */
+            width: 100%;
+            /* Ensure link takes full width */
+            display: block;
+            /* Explicitly ensure block-level behavior, forcing new lines */
+        }
+        
+        .game-button:active {
+            @apply transform scale-95;
+        }
+        /* Animation for the main title */
+        
+        .title-pulse {
+            animation: pulseEffect 2s infinite alternate;
+        }
+        
+        @keyframes pulseEffect {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.03);
+                opacity: 0.95;
+            }
+        }
+        
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <!-- Main container for the content, centered and with rounded corners -->
+    <div class="main-content-card p-8 md:p-12 rounded-xl shadow-2xl max-w-md w-full text-center">
+        <div class="mb-6">
+            <!-- Broken Knight piece image as the logo -->
+            <img src="chessyodhaimage.jpg" alt="Chess Yodha logo" class="mx-auto mb-4 w-24 h-24 object-contain" onerror="this.onerror=null;this.src='https://placehold.co/100x100/4A5568/F7FAFC?text=Chess';" />
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-2 title-pulse">
+                Chess Yodha
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400">
+                Your next move awaits!
+            </p>
+        </div>
+
+        <!-- Navigation buttons -->
+        <div class="space-y-4">
+            <a href="game.html" class="game-button">
+                Play Game
+            </a>
+            <a href="how-to-play.html" class="game-button">
+                How to Play
+            </a>
+            <a href="settings.html" class="game-button">
+                Settings
+            </a>
+            <a href="about.html" class="game-button">
+                About
+            </a>
+        </div>
+
+        <p class="text-sm text-gray-500 mt-8">
+            © 2025 Chess Yodha Inc.
+        </p>
+    </div>
+</body>
+
+</html>

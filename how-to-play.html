@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play Chess</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #2a2a2a 0%, #0d0d0d 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 1rem;
+            box-sizing: border-box;
+            color: #e0e0e0;
+        }
+        
+        .content-container {
+            background-color: #2d3748;
+            padding: 2.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border: 1px solid #4a5568;
+            max-width: 900px;
+            /* Increased max-width for more content */
+            width: 100%;
+            text-align: center;
+            overflow-y: auto;
+            /* Enable scrolling if content overflows */
+            max-height: 95vh;
+            /* Limit height to viewport for scrolling */
+        }
+        
+        .back-button {
+            @apply bg-gray-600 text-white font-bold py-2 px-4 rounded-lg shadow-md hover: bg-gray-700 transition duration-300 ease-in-out transform hover: scale-105;
+        }
+        
+        h1 {
+            color: #cbd5e0;
+            margin-bottom: 1.5rem;
+        }
+        
+        h2 {
+            color: #cbd5e0;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            /* Slightly smaller for sub-headings */
+        }
+        
+        h3 {
+            color: #a0aec0;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            text-align: left;
+            /* Align text left for readability */
+            color: #a0aec0;
+        }
+        
+        ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+        
+        ol {
+            list-style-type: decimal;
+            padding-left: 1.5rem;
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+            color: #a0aec0;
+        }
+        
+        strong {
+            color: #e2e8f0;
+            /* Make strong text stand out */
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <div class="content-container">
+        <h1 class="text-4xl md:text-5xl font-extrabold">How to Play Chess</h1>
+        <p class="text-lg text-gray-400 mb-6">
+            Welcome to the comprehensive guide on how to play Chess Yodha! Whether you're a beginner or need a refresher, this guide covers the basics.
+        </p>
+
+        <h2 class="text-2xl font-semibold">1. The Chessboard and Setup</h2>
+        <p>
+            The chessboard is an 8x8 grid of 64 squares, alternating between light and dark colors. Each player starts with 16 pieces: one king, one queen, two rooks, two knights, two bishops, and eight pawns.
+        </p>
+        <p>
+            <strong>Setup:</strong>
+        </p>
+        <ul class="list-disc ml-6">
+            <li>The board is oriented so that each player has a light-colored square on their bottom-right.</li>
+            <li>The second row (for White) and seventh row (for Black) are filled with pawns.</li>
+            <li>Rooks go in the corners.</li>
+            <li>Knights go next to the rooks.</li>
+            <li>Bishops go next to the knights.</li>
+            <li>The Queen always goes on her own color (White Queen on a light square, Black Queen on a dark square).</li>
+            <li>The King goes on the remaining square.</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold">2. How the Pieces Move</h2>
+        <p>Each piece has its own unique movement rules:</p>
+
+        <h3>Pawn (♙/♟)</h3>
+        <ul class="list-disc ml-6">
+            <li>Moves one square forward.</li>
+            <li>On its very first move, a pawn can move two squares forward.</li>
+            <li>Captures one square diagonally forward.</li>
+            <li><strong>En Passant:</strong> A special pawn capture where a pawn on its fifth rank can capture an opponent's pawn that has moved two squares forward from its starting position, as if it had only moved one. This must be done immediately after
+                the two-square move.</li>
+            <li><strong>Promotion:</strong> If a pawn reaches the opposite end of the board (the 8th rank for White, 1st for Black), it must be promoted to a Queen, Rook, Bishop, or Knight. A Queen is the most common choice.</li>
+        </ul>
+
+        <h3>Rook (♖/♜)</h3>
+        <ul class="list-disc ml-6">
+            <li>Moves any number of squares horizontally or vertically.</li>
+            <li>Cannot jump over other pieces.</li>
+        </ul>
+
+        <h3>Knight (♘/♞)</h3>
+        <ul class="list-disc ml-6">
+            <li>Moves in an "L" shape: two squares in one cardinal direction (horizontal or vertical), then one square perpendicular to that direction.</li>
+            <li>It is the only piece that can jump over other pieces.</li>
+        </ul>
+
+        <h3>Bishop (♗/♝)</h3>
+        <ul class="list-disc ml-6">
+            <li>Moves any number of squares diagonally.</li>
+            <li>Cannot jump over other pieces.</li>
+            <li>Always stays on squares of the same color (light or dark).</li>
+        </ul>
+
+        <h3>Queen (♕/♛)</h3>
+        <ul class="list-disc ml-6">
+            <li>The most powerful piece.</li>
+            <li>Combines the moves of a Rook and a Bishop: moves any number of squares horizontally, vertically, or diagonally.</li>
+            <li>Cannot jump over other pieces.</li>
+        </ul>
+
+        <h3>King (♔/♚)</h3>
+        <ul class="list-disc ml-6">
+            <li>Moves one square in any direction (horizontally, vertically, or diagonally).</li>
+            <li><strong>Castling:</strong> A special move involving the king and one of the rooks. It's the only move where two pieces move at once. The king moves two squares towards a rook, and the rook moves to the square the king crossed. This can only
+                happen if neither the king nor the rook has moved, there are no pieces between them, and the king is not in check, nor does it pass through or land on a square that is attacked by an opponent's piece.</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold">3. Basic Rules</h2>
+        <ul class="list-disc ml-6">
+            <li><strong>Turns:</strong> White always moves first. Players alternate turns, moving one piece per turn (except during castling).</li>
+            <li><strong>Capturing:</strong> To capture an opponent's piece, move your piece to the square occupied by the opponent's piece. The captured piece is removed from the board.</li>
+            <li><strong>Check:</strong> When a king is under attack by an opponent's piece, it is "in check." The player whose king is in check must immediately get out of check on their next move. This can be done by:
+                <ul class="list-circle ml-8 mt-2">
+                    <li>Moving the king to a safe square.</li>
+                    <li>Blocking the attack with another piece.</li>
+                    <li>Capturing the attacking piece.</li>
+                </ul>
+            </li>
+            <li><strong>Checkmate:</strong> If a king is in check and there is no legal move to get out of check, the king is checkmated, and the game ends. The player who delivered checkmate wins.</li>
+            <li><strong>Stalemate:</strong> If a player has no legal moves, but their king is NOT in check, it is a stalemate. The game is a draw.</li>
+            <li><strong>Draws:</strong> Games can also end in a draw by agreement, three-fold repetition (the same position occurs three times), the fifty-move rule (no pawn moves or captures for fifty moves), or insufficient material (not enough pieces left
+                to force a checkmate).</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold">4. Game Flow</h2>
+        <ol class="list-decimal ml-6">
+            <li><strong>Opening:</strong> The first few moves where players develop their pieces and control the center of the board.</li>
+            <li><strong>Middlegame:</strong> The main phase of the game where players execute their strategies, attack, and defend.</li>
+            <li><strong>Endgame:</strong> The phase where most pieces have been exchanged, and the focus shifts to king activity and pawn promotion.</li>
+        </ol>
+
+        <p class="text-lg text-gray-400 mt-6">
+            This guide provides the fundamental rules of chess. The best way to learn is by playing! Good luck and enjoy your game of Chess Yodha!
+        </p>
+
+        <a href="index.html" class="back-button mt-8 inline-block">
+            Back to Home
+        </a>
+    </div>
+</body>
+
+</html>
