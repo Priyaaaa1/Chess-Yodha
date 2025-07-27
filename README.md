@@ -56,8 +56,8 @@ A web-based chess game with an intelligent AI opponent powered by Minimax and Al
 
 This project was developed by:
 
-* **[Nayan Pandey](https://github.com/nayan-pandey-github-username)** (Replace with actual GitHub username)
-* **[Priya Tiwari](https://github.com/priya-tiwari-github-username)** (Replace with actual GitHub username)
+* **[Nayan Pandey](https://github.com/nayan-095)** 
+* **[Priya Tiwari](https://github.com/Priyaaaa1)** 
 
 We welcome suggestions and improvements! If you have any ideas, feel free to open an issue or submit a pull request.
 
